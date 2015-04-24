@@ -7,6 +7,11 @@ body {
 	font : normal 14px 'Open Sans', Arial, sans-serif;
 	color: #999;
 	background: #f1f1f1;
+	background-color: yellow;
+	color: green;
+	text-transform: capitalize;
+	outline-color: blue;
+
 }
 
 .wrap {
