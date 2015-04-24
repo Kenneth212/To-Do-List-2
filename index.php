@@ -12,10 +12,10 @@
 		$mysqli = new mysqli('localhost', 'root', 'root', 'todo');
 		$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 		if ($result = $mysqli->query($query)) {
-			$numrows = $result->num_rows:
+			$numrows = $result->num_rows;
 			if ($numrows>0) {
-				white($row = $result->fetch_assoc()){
-					$task_id = $row['id'];
+				while($row = $result->fetch_assoc()){
+					$task_id = $row["id"];
 					$task_name = $row["task"];	
 
 					echo '<li>
@@ -26,8 +26,8 @@
 				}
 			}
 		}
-
 		?>
+
 		</ul>
 	</div>
 	<form class="add-new-task" autocomplete="off">
